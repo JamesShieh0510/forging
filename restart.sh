@@ -10,9 +10,10 @@ source activate python36
 # pip install ipython
 
 #docker pull continuumio/anaconda3
-kill -9 $(lsof -t -i:8055)
+#kill -9 $(lsof -t -i:8055)
 
 npm install
 npm start
-#nohup npm start  > /dev/null 2>&1 &
+
+#kill -9 $(lsof -t -i:8055) && nohup npm start  > /dev/null 2>&1 &
 #curl 127.0.0.1:8055/start

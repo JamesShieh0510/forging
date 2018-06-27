@@ -3,7 +3,7 @@ docker login
 
 #取得BPM的application source code
 WORKPATH=$(pwd)
-#rm -R ./application-source-code/forging
+rm -R ./application-source-code/forging
 mkdir ./application-source-code
 chmod -Rf 777 ./application-source-code
 cd    ./application-source-code

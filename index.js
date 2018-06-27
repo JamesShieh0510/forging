@@ -18,7 +18,7 @@ app.get('/start', function(req, res){
 	else { //else, BPM is not running -> run BPM
 		
 		isBPMRunning = true;
-				var workerProcess = child_process.exec('IPython Forging-preprocess.py',
+				var workerProcess = child_process.exec('ipython Forging-preprocess.py',
 					function (error, stdout, stderr) {
 						if (error) {
 							console.log(error.stack);

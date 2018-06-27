@@ -1,4 +1,4 @@
-FROM continuumio/anaconda3
+FROM continuumio/anaconda3:5.1.0
 # set the base image
 
 # author
@@ -23,9 +23,19 @@ RUN apt-get install -y npm
 #sudo bash nodesource_setup.sh
 #sudo apt-get install -y nodejs && sudo apt-get install -y npm
 
+RUN export PATH=~/anaconda3/bin:$PATH
+RUN conda create -y --name python36 python=3.6 
+#RUN source activate python36  
+RUN pip install pandas
+RUN pip install matplotlib
+RUN pip install xlsxwriter
+RUN pip install -U scikit-learn
+RUN pip install scipy
+RUN pip install ipython
+
 RUN mkdir /app
 ADD ./application-source-code/ /app
 
 EXPOSE 8055
-COPY ./restart.sh /app/restart.sh
-ENTRYPOINT ["sh","/app/restart.sh"]
+# COPY ./application-source-code/forging/restart.sh /app/restart.sh
+# ENTRYPOINT ["sh","/app/forging/restart.sh"]

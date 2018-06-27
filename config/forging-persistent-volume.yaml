@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+    name: forging-code-pv
+    labels:
+      cpa/volume: containerized-app-forging-source-code
+spec:
+    capacity:
+      storage: 1Gi
+    accessModes:
+      - ReadWriteMany
+    hostPath:
+        path: "/home/autolab/volume"

@@ -1,0 +1,26 @@
+{
+  "name": "forging",
+  "version": "1.0.0",
+  "description": "Autolab, NCKU",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://JamesShieh0510@github.com/JamesShieh0510/forging.git"
+  },
+  "author": "James Shieh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamesShieh0510/forging/issues"
+  },
+  "homepage": "https://github.com/JamesShieh0510/forging#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "child_process": "^1.0.2",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security"
+  }
+}

@@ -40,9 +40,9 @@ spec:
           - name: MYSQL_HOST
             value: 10.96.75.205
         # https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/
-        livenessProbe:
-         tcpSocket:
-           port: 8055
+        #livenessProbe:
+        # tcpSocket:
+        #   port: 8055
         ports:
         - containerPort: 8055
         volumeMounts:

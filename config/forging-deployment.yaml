@@ -20,7 +20,7 @@ spec:
       - image: autolab/forging:1.0.1
         imagePullPolicy: Always
         command: ["/bin/sh"]
-        args: ["/app/forging/restart.sh"]
+        args: ["/app/start.sh"]
         name: forging-web-service
         resources:
           requests:
@@ -46,7 +46,7 @@ spec:
         ports:
         - containerPort: 8055
         volumeMounts:
-        - mountPath: /app/forging/
+        - mountPath: /
           subPath: forging
           name: containerized-forging-app-volume
       volumes:

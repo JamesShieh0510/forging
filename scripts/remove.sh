@@ -1,0 +1,5 @@
+kubectl delete pv --selector='cpa/volume=containerized-app-forging-source-code'
+kubectl delete pvc --selector='cpa/volume=containerized-app-forging-source-code'
+kubectl delete deployment --selector='autolab/cpa=forging'
+kubectl delete services --selector='autolab/cpa=forging'
+kubectl delete pods --selector='app=forging-web-service'
